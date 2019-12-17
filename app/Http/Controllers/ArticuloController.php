@@ -8,23 +8,14 @@ use App\Articulo;
 
 class ArticuloController extends Controller
 {
-    
-    protected function validator(array $data) {
-        return Validator::make($data, [
-            'nombre' => ['required', 'string', 'max:255'],
-            'descripcion' => ['required', 'string', 'max:255'],
-            'precioUnidad' => ['required', 'double', 'min:1'],
-            'stock' => ['required', 'integer', 'min:1'],
-        ]);
-    }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
+        $articulos = Articulo::paginate(15);
+        return view('articulo.mostrar', compact('articulos'));
     }
 
     /**

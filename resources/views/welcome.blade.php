@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Proyecto01</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,10 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Proyecto 01
                 </div>
 
                 <div class="links">
+                    <a href="<?=route('articulo.index')?>">Mostrar artículos</a>
                     <a href="<?=route('articulo.create')?>">Registrar artículo</a>
                 </div>
             </div>
